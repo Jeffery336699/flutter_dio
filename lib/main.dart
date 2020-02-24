@@ -8,19 +8,19 @@ import 'package:flutter_dio/screen_dio_demo/screen_utils_demo.dart';
 import 'package:provide/provide.dart';
 
 //void main() => runApp(ScreenDioDemo());
-//void main() => runApp(ProviderDemo());
+void main() => runApp(ProviderDemo());
 
 ///fluro路由演示
-void main() {
-  final router = Router();
-  Routes.configureRoutes(router);
-  Application.router=router;
-  runApp(
-    MaterialApp(
-      home: RoutesDemo(),
-      onGenerateRoute: Application.router.generator,
-    ),
-  );
-}
+//void main() {
+//  final router = Router();
+//  Routes.configureRoutes(router);
+//  Application.router=router;
+//  runApp(
+//    MaterialApp(
+//      home: RoutesDemo(),
+//      onGenerateRoute: Application.router.generator,
+//    ),
+//  );
+//}
 
 

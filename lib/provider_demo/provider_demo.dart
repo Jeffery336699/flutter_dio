@@ -47,6 +47,9 @@ class _CounterAppState extends State<CounterApp> {
         Provide<Counter>(
           builder: (context, child, counter) => Text('${counter.value}'),
         ),
+        ///错误演示,不加Provide<Counter>.builder(context, child, counter)就相当于没有监听数据变化效果
+        ///实际数据的变化不会引起显示数据的变化
+        Text('${currentCounter.value}',style: TextStyle(fontSize: 28.0,color: Colors.pink[400])),
         StreamBuilder<Counter>(
             initialData: currentCounter,
             stream: Provide.stream<Counter>(context)
