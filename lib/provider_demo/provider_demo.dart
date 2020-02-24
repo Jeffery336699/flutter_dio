@@ -47,6 +47,11 @@ class _CounterAppState extends State<CounterApp> {
         Provide<Counter>(
           builder: (context, child, counter) => Text('${counter.value}'),
         ),
+        ///其实只需要有Provide包裹就行,就能达到订阅效果
+        Provide<Counter>(
+          builder: (context, child, counter) => Text('${currentCounter.value} \n ${identical(counter, currentCounter)}',
+              style: TextStyle(fontSize: 28.0,color: Colors.green[400]),textAlign: TextAlign.center,),
+        ),
         ///错误演示,不加Provide<Counter>.builder(context, child, counter)就相当于没有监听数据变化效果
         ///实际数据的变化不会引起显示数据的变化
         Text('${currentCounter.value}',style: TextStyle(fontSize: 28.0,color: Colors.pink[400])),
