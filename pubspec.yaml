@@ -27,6 +27,7 @@ dependencies:
   flutter_screenutil: ^1.0.2
   provide: ^1.0.2
   fluro: ^1.5.2
+  flutter_splash_screen: ^0.1.0
 
 dev_dependencies:
   flutter_test:
